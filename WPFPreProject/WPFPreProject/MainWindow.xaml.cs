@@ -19,10 +19,27 @@ namespace WPFPreProject
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
+
     {
+        ApplicationContext db;
+
+
+
         public MainWindow()
         {
             InitializeComponent();
+
+            db = new ApplicationContext();
+
+
+            List<building> buildingRows = db.buildings.ToList();
+
+            string data = "";
+            foreach (building buildingRow in buildingRows)
+                data += buildingRow.buildingName + "  |  ";
+
+            dataDisplay.Text = data;
+
         }
     }
 }
