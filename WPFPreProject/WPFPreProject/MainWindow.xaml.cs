@@ -32,13 +32,9 @@ namespace WPFPreProject
             db = new ApplicationContext();
 
 
-            List<building> buildingRows = db.buildings.ToList();
+            List<building> buildings = db.buildings.ToList();
 
-            string data = "";
-            foreach (building buildingRow in buildingRows)
-                data += buildingRow.buildingName + "  |  ";
-
-            dataDisplay.Text = data;
+            listOfBuildings.ItemsSource = buildings;
 
         }
     }
