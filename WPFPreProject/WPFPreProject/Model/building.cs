@@ -16,10 +16,11 @@ namespace WPFPreProject
 
         public string buildingName { get; set; }
 
-        public override string ToString()
+
+        /*public override string ToString()
         {
             return buildingName;
-        }
+        }*/
 
     }
 

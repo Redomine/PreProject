@@ -10,7 +10,18 @@
     <Grid x:Name="MainRoot" Background="#ffdadada">
         <Border Width="400" Background="White" Margin="50,24,50,89">
             <StackPanel>
-                <ListView x:Name="listOfBuildings" />
+                <ListView x:Name="listOfBuildings" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <WrapPanel>
+                                <TextBlock Text="{Binding buildingName}"/>
+                                
+                            </WrapPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+
 
             </StackPanel>
         </Border>
